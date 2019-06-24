@@ -3,6 +3,8 @@ E-commerce website with JAVA EE for SM-Devis
 
 Ce projet a été fait avec: 
 * Java EE
-- JSP, Servlet, ...
+  - JSP
+  - Servlet
+  - ...
 
 * Hibernate pour la connexion base de données
