@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.froidShop.beans.Product" table="products">
+        <id name="id" type="integer" length="10" column="id">
+            <generator class="increment"/>
+        </id>
+        <property name="description" column="description" length="300" type="string"/>
+        <property name="price" column="price" type="double"/>
+        <property name="quantity" column="quantity" length="11" type="integer"/>
+        <property name="image" column="image" type="string" length="500"/>
+        <property name="category" column="category" type="string" length="100"/>
+    </class>
+</hibernate-mapping>
