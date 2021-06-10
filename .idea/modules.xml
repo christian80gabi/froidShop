@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/FroidShop-International.iml" filepath="$PROJECT_DIR$/FroidShop-International.iml" />
+      <module fileurl="file://$PROJECT_DIR$/froidShop.iml" filepath="$PROJECT_DIR$/froidShop.iml" />
     </modules>
   </component>
 </project>

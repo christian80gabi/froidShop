@@ -1,4 +1,4 @@
-888888888888<%--
+<%--
   Created by IntelliJ IDEA.
   User: nanac
   Date: 3/12/2019

@@ -1,0 +1,30 @@
+version: "3.8"
+
+services:
+  # MYSQL
+  db:
+    image: mysql
+    container_name: mysqldb
+    ports:
+      - 3306:3306
+    volumes:
+      - ./mysql-data:/var/lib/mysql
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: MysqlPass_1
+      MYSQL_DATABASE: froidshop
+      MYSQL_USER: user
+      MYSQL_PASSWORD: userPass
+
+  adminer:
+    image: adminer
+    container_name: froidshop_database_adminer
+    restart: always
+    ports:
+      - 8080:8080
+volumes:
+  data: { }
+networks:
+  default:
+    name: froidshop_database_default
