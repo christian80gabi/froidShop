@@ -1,4 +1,4 @@
-# froidShop_e-commerce_Website
+# froidShop
 E-commerce website with JAVA EE
 
 Ce projet a été fait avec: 
