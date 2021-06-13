@@ -17,12 +17,12 @@ services:
       MYSQL_USER: user
       MYSQL_PASSWORD: userPass
 
-  adminer:
-    image: adminer
-    container_name: froidshop_database_adminer
-    restart: always
-    ports:
-      - 8080:8080
+  # adminer:
+  #   image: adminer
+  #   container_name: froidshop_database_adminer
+  #   restart: always
+  #   ports:
+  #     - 8080:8080
 volumes:
   data: { }
 networks:

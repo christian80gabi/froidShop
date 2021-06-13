@@ -13,7 +13,7 @@ import java.io.IOException;
 import java.util.List;
 
 @WebServlet(name = "Category_Controller")
-public class Category_Controller extends HttpServlet {
+public class CategoryController extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String page = "category_manager.jsp";
         Category category = new Category();

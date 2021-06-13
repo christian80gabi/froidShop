@@ -3,29 +3,30 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
          version="4.0">
+    <display-name>froidShop</display-name>
     <servlet>
         <servlet-name>LoginAdmin</servlet-name>
         <servlet-class>com.froidShop.controllers.LoginAdmin</servlet-class>
     </servlet>
     <servlet>
-        <servlet-name>Sign_upCustomer</servlet-name>
-        <servlet-class>com.froidShop.controllers.Sign_upCustomer</servlet-class>
+        <servlet-name>SignupCustomer</servlet-name>
+        <servlet-class>com.froidShop.controllers.SignupCustomer</servlet-class>
     </servlet>
     <servlet>
-        <servlet-name>Sign_InCustomer</servlet-name>
-        <servlet-class>com.froidShop.controllers.Sign_InCustomer</servlet-class>
+        <servlet-name>SignInCustomer</servlet-name>
+        <servlet-class>com.froidShop.controllers.SignInCustomer</servlet-class>
     </servlet>
     <servlet>
-        <servlet-name>Category_Controller</servlet-name>
-        <servlet-class>com.froidShop.controllers.Category_Controller</servlet-class>
+        <servlet-name>CategoryController</servlet-name>
+        <servlet-class>com.froidShop.controllers.CategoryController</servlet-class>
     </servlet>
     <servlet>
-        <servlet-name>Product_Controller</servlet-name>
-        <servlet-class>com.froidShop.controllers.Product_Controller</servlet-class>
+        <servlet-name>ProductController</servlet-name>
+        <servlet-class>com.froidShop.controllers.ProductController</servlet-class>
     </servlet>
     <servlet>
-        <servlet-name>AddProduct_Controller</servlet-name>
-        <servlet-class>com.froidShop.controllers.AddProduct_Controller</servlet-class>
+        <servlet-name>AddProductController</servlet-name>
+        <servlet-class>com.froidShop.controllers.AddProductController</servlet-class>
         <multipart-config>
             <max-file-size>5242880</max-file-size>
             <max-request-size>2121440</max-request-size>
@@ -33,16 +34,16 @@
         </multipart-config>
     </servlet>
     <servlet>
-        <servlet-name>Shop_Controller</servlet-name>
-        <servlet-class>com.froidShop.controllers.Shop_Controller</servlet-class>
+        <servlet-name>ShopController</servlet-name>
+        <servlet-class>com.froidShop.controllers.ShopController</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>Cart_Controller</servlet-name>
-        <servlet-class>com.froidShop.controllers.Cart_Controller</servlet-class>
+        <servlet-class>com.froidShop.controllers.CartController</servlet-class>
     </servlet>
     <servlet>
-        <servlet-name>AdminHome_Controller</servlet-name>
-        <servlet-class>com.froidShop.controllers.AdminHome_Controller</servlet-class>
+        <servlet-name>AdminHomeController</servlet-name>
+        <servlet-class>com.froidShop.controllers.AdminHomeController</servlet-class>
     </servlet>
 
     <servlet>
@@ -56,31 +57,31 @@
         <url-pattern>/admin</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-        <servlet-name>Sign_upCustomer</servlet-name>
+        <servlet-name>SignupCustomer</servlet-name>
         <url-pattern>/inscription</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-        <servlet-name>Sign_InCustomer</servlet-name>
+        <servlet-name>SignInCustomer</servlet-name>
         <url-pattern>/login</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-        <servlet-name>Category_Controller</servlet-name>
+        <servlet-name>CategoryController</servlet-name>
         <url-pattern>/categories</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-        <servlet-name>Product_Controller</servlet-name>
+        <servlet-name>ProductController</servlet-name>
         <url-pattern>/products</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-        <servlet-name>AddProduct_Controller</servlet-name>
+        <servlet-name>AddProductController</servlet-name>
         <url-pattern>/add_product</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-        <servlet-name>Shop_Controller</servlet-name>
+        <servlet-name>ShopController</servlet-name>
         <url-pattern>/shop</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-        <servlet-name>AdminHome_Controller</servlet-name>
+        <servlet-name>AdminHomeController</servlet-name>
         <url-pattern>/adminHome</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
@@ -100,7 +101,7 @@
         </jsp-property-group>
     </jsp-config>
 
-    <welcome-file-list>
-        <welcome-file>shop.jsp</welcome-file>
-    </welcome-file-list>
+    <!--    <welcome-file-list>-->
+    <!--        <welcome-file>index.html</welcome-file>-->
+    <!--    </welcome-file-list>-->
 </web-app>

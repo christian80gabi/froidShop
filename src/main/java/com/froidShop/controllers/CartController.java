@@ -3,8 +3,8 @@ package com.froidShop.controllers;
 import com.froidShop.beans.Cart;
 import com.froidShop.beans.Devise;
 import com.froidShop.beans.Product;
+import com.froidShop.dao.CartDao;
 import com.froidShop.dao.CartDaoImpl;
-import com.froidShop.service.CartService;
 import com.froidShop.service.DeviseService;
 import com.froidShop.service.ProductService;
 import com.froidShop.service.ServiceImpl;
@@ -15,32 +15,20 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.List;
 
-@WebServlet(name = "Shop_Controller")
-public class Shop_Controller extends HttpServlet {
+@WebServlet(name = "Cart_Controller")
+public class CartController extends HttpServlet {
+
+    private CartDaoImpl cart = new CartDaoImpl();
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        int id = Integer.parseInt(request.getParameter("productIdentity"));
-        System.out.println("ID is : " + id);
-
-        CartService cartService = new ServiceImpl();
-        List<Product> cartItems = cartService.addCart(id);
-
-        CartDaoImpl dao = new CartDaoImpl();
-        System.out.println("....CartDao........" + dao.getItems() +  "...............");
-
-        System.out.println("....CartItems........" + cartItems +  "...............");
-
         doGet(request, response);
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String page = "shop.jsp";
-
-        ProductService service = new ServiceImpl();
-        List list = service.listProducts();
+        String page = "cart.jsp";
+        System.out.println("Cart Items : " + cart.getItems());
 
         DeviseService deviseService = new ServiceImpl();
         Devise devise = deviseService.getDevise();
@@ -48,7 +36,7 @@ public class Shop_Controller extends HttpServlet {
         String monaie = devise.getDevise();
         System.out.println("La devise est: " + monaie);
 
-        request.setAttribute("list", list);
+        request.setAttribute("cartList", cart.getItems());
         request.setAttribute("monaie", monaie);
 
         request.getRequestDispatcher(page).forward(request, response);

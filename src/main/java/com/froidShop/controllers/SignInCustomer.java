@@ -12,7 +12,7 @@ import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
 @WebServlet(name = "Sign_InCustomer")
-public class Sign_InCustomer extends HttpServlet {
+public class SignInCustomer extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String mail = request.getParameter("email");
         String password = request.getParameter("password");

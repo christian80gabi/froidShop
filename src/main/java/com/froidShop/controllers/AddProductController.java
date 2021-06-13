@@ -15,7 +15,7 @@ import java.io.*;
 import java.util.List;
 
 @WebServlet(name = "AddProduct_Controller")
-public class AddProduct_Controller extends HttpServlet {
+public class AddProductController extends HttpServlet {
     private static final int TAILLE_TAMPON = 10240; // Taille tampon
     private static final String CHEMIN_IMAGES = "D:/Workspace JAVA & J2EE/IdeaProjects/FroidShop-International/web/img/"; // chemin permanent
 

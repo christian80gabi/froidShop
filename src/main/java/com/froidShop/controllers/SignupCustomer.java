@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 @WebServlet(name = "Sign_upCustomer")
-public class Sign_upCustomer extends HttpServlet {
+public class SignupCustomer extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String message = "Password and Confirm Password must be same";
         String page = "sign_up.jsp";
